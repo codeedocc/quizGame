@@ -12,7 +12,9 @@ function Result() {
       <h2>
         Вы отгадали {correct} ответа из {questions.length}
       </h2>
-      <button>Попробовать снова</button>
+      <a href="/">
+        <button>Попробовать снова</button>
+      </a>
     </div>
   )
 }
