@@ -1,8 +1,13 @@
 import React from 'react'
+import Game from './components/Game'
 import './index.scss'
 
 function App() {
-  return <div>hello World!</div>
+  return (
+    <div className="App">
+      <Game />
+    </div>
+  )
 }
 
 export default App
