@@ -5,8 +5,8 @@ import '../index.scss'
 import { questions } from './data'
 
 function Game() {
-  const { setStep } = useActions()
-  const { step } = useAppSelector((state) => state.quiz)
+  const { setStep, setCorrect } = useActions()
+  const { step, correct } = useAppSelector((state) => state.quiz)
   const question = questions[step]
 
   const percentage = Math.round((step / questions.length) * 100)
@@ -14,6 +14,10 @@ function Game() {
   const onClickVariant = (id: number) => {
     console.log(step, id)
     setStep(step + 1)
+
+    if (id === question.correct) {
+      setCorrect(correct + 1)
+    }
   }
 
   return (
