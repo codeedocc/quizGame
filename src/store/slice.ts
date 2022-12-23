@@ -1,6 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = {
+interface IInitialState {
+  step: number
+}
+
+const initialState: IInitialState = {
   step: 0,
 }
 
@@ -14,5 +18,6 @@ export const quizSlice = createSlice({
   },
 })
 
-export const { setStep } = quizSlice.actions
-export default quizSlice.reducer
+// export const { setStep } = quizSlice.actions
+export const quizActions = quizSlice.actions
+export const quizReducer = quizSlice.reducer

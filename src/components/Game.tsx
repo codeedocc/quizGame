@@ -1,7 +1,12 @@
 import React from 'react'
+import { useActions } from '../hooks/actions'
+import { useAppSelector } from '../hooks/redux'
 import '../index.scss'
 
 function Game() {
+  const { setStep } = useActions()
+  const { step } = useAppSelector((state) => state.quiz)
+
   return (
     <>
       <div className="progress">
