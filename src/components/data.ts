@@ -1,4 +1,10 @@
-export const questions = [
+interface IQuestions {
+  title: string
+  variants: string[]
+  correct: number
+}
+
+export const questions: IQuestions[] = [
   {
     title: 'React - это ... ?',
     variants: ['библиотека', 'фреймворк', 'приложение'],
