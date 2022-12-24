@@ -4,12 +4,14 @@ interface IInitialState {
   step: number
   correct: number
   isStarted: boolean
+  isHello: boolean
 }
 
 const initialState: IInitialState = {
   step: 0,
   correct: 0,
   isStarted: false,
+  isHello: true,
 }
 
 export const quizSlice = createSlice({
@@ -24,6 +26,9 @@ export const quizSlice = createSlice({
     },
     setIsStarted: (state, action) => {
       state.isStarted = action.payload
+    },
+    setIsHello: (state, action) => {
+      state.isHello = action.payload
     },
   },
 })
