@@ -5,7 +5,15 @@ body {
   font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #6a5be2;
+  background: linear-gradient(
+    45deg,
+    #f17c58,
+    #e94584,
+    #24aadb,
+    #27dbb1,
+    #ffdc18,
+    #ff3706
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,11 +21,12 @@ body {
 }
 
 .App {
-  width: 500px;
+  width: 350px;
   border-radius: 30px;
   padding: 40px;
   background-color: #fff;
   position: relative;
+  text-align: center;
 
   .result {
     text-align: center;

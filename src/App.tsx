@@ -4,13 +4,20 @@ import Result from './components/Result'
 import './index.scss'
 import { useAppSelector } from './hooks/redux'
 import { questions } from './components/data'
+import StartMessage from './components/StartMessage'
 
 function App() {
-  const { step } = useAppSelector((state) => state.quiz)
+  const { step, isStarted } = useAppSelector((state) => state.quiz)
 
   return (
     <div className="App">
-      {step !== questions.length ? <Game /> : <Result />}
+      {!isStarted ? (
+        <StartMessage />
+      ) : step !== questions.length ? (
+        <Game />
+      ) : (
+        <Result />
+      )}
     </div>
   )
 }

@@ -3,11 +3,13 @@ import { createSlice } from '@reduxjs/toolkit'
 interface IInitialState {
   step: number
   correct: number
+  isStarted: boolean
 }
 
 const initialState: IInitialState = {
   step: 0,
   correct: 0,
+  isStarted: false,
 }
 
 export const quizSlice = createSlice({
@@ -18,7 +20,10 @@ export const quizSlice = createSlice({
       state.step = action.payload
     },
     setCorrect: (state, action) => {
-      state.step = action.payload
+      state.correct = action.payload
+    },
+    setIsStarted: (state, action) => {
+      state.isStarted = action.payload
     },
   },
 })
