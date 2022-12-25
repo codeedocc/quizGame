@@ -12,7 +12,6 @@ function Game() {
   const percentage = Math.round((step / questions.length) * 100)
 
   const onClickVariant = (id: number) => {
-    console.log(step, id)
     setStep(step + 1)
 
     if (id === question.correct) {
