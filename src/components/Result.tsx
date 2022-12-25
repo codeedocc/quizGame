@@ -6,8 +6,6 @@ import { questions } from '../components/data'
 function Result() {
   const { correct } = useAppSelector((state) => state.quiz)
 
-  console.log(correct)
-
   return (
     <div className="result">
       {correct >= 7 ? (
@@ -34,8 +32,10 @@ function Result() {
             Все мы иногда ошибаемся, но ничего страшного - главные победы
             впереди :)
           </p>
-          <a href="/">
-            <button>Попробовать ещё раз</button>
+          <a href="/quizGame/">
+            <button>
+              <h3>Попробовать ещё раз</h3>
+            </button>
           </a>
         </>
       )}
@@ -44,6 +44,3 @@ function Result() {
 }
 
 export default Result
-
-// https://cdn-icons-png.flaticon.com/512/6467/6467774.png
-// https://cdn-icons-png.flaticon.com/512/2278/2278992.png"
