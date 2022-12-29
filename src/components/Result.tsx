@@ -10,7 +10,10 @@ function Result() {
     <div className="result">
       {correct >= 7 ? (
         <>
-          <img src="https://cdn-icons-png.flaticon.com/512/6467/6467774.png" />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/6467/6467774.png"
+            alt="Счастливый мишка"
+          />
           <h2>
             Ты отгадала {correct} из {questions.length}!
           </h2>
@@ -26,7 +29,10 @@ function Result() {
         </>
       ) : (
         <>
-          <img src="https://cdn-icons-png.flaticon.com/512/8752/8752181.png" />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/8752/8752181.png"
+            alt="Грустный пёсик"
+          />
           <h2>
             Ты отгадала {correct} из {questions.length}!
           </h2>
